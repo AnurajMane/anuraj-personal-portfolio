@@ -1,16 +1,43 @@
-# React + Vite
+# Anuraj Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS. Showcasing projects, experience, skills, and testimonials with smooth animations and glassmorphism UI.
 
-Currently, two official plugins are available:
+## Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Install Dependencies (First time only)
+```bash
+npm install
+```
 
-## React Compiler
+### 2. Run Development Server
+```bash
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The portfolio will be available at `http://localhost:5173`
 
-## Expanding the ESLint configuration
+## Available Commands
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev      # Start development server with hot reload
+npm run build    # Create production build in dist/ folder
+npm run preview  # Preview the production build locally
+npm lint         # Check code quality with ESLint
+```
+
+## Tech Stack
+
+- **React** 19 - UI library
+- **Vite** - Build tool with fast HMR
+- **Tailwind CSS** - Utility-first styling
+- **Lucide React** - Icon library
+- **React Icons** - Additional icons (for social links)
+
+
+## Features
+
+✨ Smooth animations and transitions
+🎨 Glassmorphism UI design
+📱 Fully responsive layout
+🔗 Social media links
+⚡ Fast development with Vite HMR
