@@ -4,8 +4,31 @@ import { ArrowRight, ChevronDown,   Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 // import * as Icons from "lucide-react";
 // console.log(Icons);
+
+const skills = [
+    "C",
+    "C++",
+    "Java",
+    "C# (ASP.NET)",
+    "HTML",
+    "CSS",
+    "Telwind CSS",
+    "JavaScript",
+    "React",
+    "Express",
+    "Node.js",
+    "MySQL",
+    "MongoDB",
+    "Git",
+    "GitHub Actions",
+    "BitBucket",
+    "Docker",
+    "Redis",
+]
+
+
 export const Hero = () => {
-    return <section className="relative min-h-screen flex items-center overflow-hidden">
+    return <section className="relative mt-30 min-h-screen flex items-center overflow-hidden">
         {/*background image*/}
         <div className="absolute inset-0">
             <img src="/hero-bg.jpg" alt="hero image" className="w-full h-full object-cover opacity-40" />
@@ -104,19 +127,46 @@ export const Hero = () => {
                                 className="w-full aspect-[4/5] object-cover rounded-2xl"
                             />
                             {/* floating badge */}
-                            <div>
-                                <div>
-                                    <div/>
-                                    <span>
-                                        
+                            <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
+                                    <span className="text-sm font-medium">
+                                        Available for work
                                     </span>
                                 </div>
                             </div>
                             {/* stats badge */}
+                            <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                {/* <div className="text-2xl font-bold text-primary">0+</div>
+                                <div className="text-xs text-muted-foreground">Years Exp.</div> */}
+                                <div className="text-2xl font-bold text-primary">CDAC</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* skills section */}
+            <div className="mt-20 animate-fade-in animation-delay-600 pb-19">
+                <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
+                <div className="relative overflow-hidden">
+                    <div className="flex animate-marquee">
+                        {[...skills, ...skills].map((skill, idx) => (
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 ">
+            <a
+                href="#about"
+                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+            >
+                <span className="text-xs uppercase tracking-wider">Scroll</span>
+                <ChevronDown className="w-6 h-6 animate-bounce" />
+            </a>
         </div>
     </section>
 }
