@@ -1,10 +1,11 @@
 import { Button } from "@/components/button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { ArrowRight, ChevronDown,   Download } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMailBulk, FaTwitter} from "react-icons/fa";
+import { SiLeetcode } from 'react-icons/si';
 // import * as Icons from "lucide-react";
 // console.log(Icons);
-
+ 
 const skills = [
     "C",
     "C++",
@@ -56,7 +57,7 @@ export const Hero = () => {
                     <div className="animate-fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>
-                                Software Engineer －O－ React Specialist
+                                Software Engineer －O－ C/C++ Specialist
                         </span>
                     </div>
                     {/* headline */}
@@ -83,23 +84,34 @@ export const Hero = () => {
                     </div>
                     {/* call to action buttons */}
                     <div className="inline-flex">
-                        <Button size="lg">
+                        <a href="#contact"><Button size="lg">
                             Contact Me<ArrowRight className="w-5 h-5" />
-                        </Button>
-                        <AnimatedBorderButton>
-                            <Download/>Resume
-                        </AnimatedBorderButton>
-                        <AnimatedBorderButton>
-                            <Download/>CV
-                        </AnimatedBorderButton>
+                        </Button></a>
+                        <a href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <AnimatedBorderButton>
+                                <Download className="w-4 h-4 mr-2" />
+                                Resume
+                            </AnimatedBorderButton>
+                        </a>
+
+                        <a href="/cv.pdf" download>
+                            <AnimatedBorderButton>
+                                <Download className="w-4 h-4 mr-2" />
+                                CV
+                            </AnimatedBorderButton>
+                        </a>
                     </div>
                     {/* Social links */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                         <span className="text-sm text-muted-foreground">Follow:</span>
                         {[
-                            { icon: FaGithub, href: "#" },
-                            { icon: FaLinkedin, href: "#" },
-                            { icon: FaTwitter, href: "#" },
+                            { icon: FaGithub, href: import.meta.env.VITE_SOCIAL_GITHUB},
+                            { icon: FaLinkedin, href: import.meta.env.VITE_SOCIAL_LINKEDIN },
+                            { icon: FaTwitter, href: "" },
+                            {icon: FaMailBulk , href: import.meta.env.VITE_PERSONAL_MAIL_TO},
+                            {icon:SiLeetcode, href:import.meta.env.VITE_SOCIAL_LEETCODE}
                             ].map((social, idx) => (
                             <a
                                 key={idx}
@@ -115,11 +127,7 @@ export const Hero = () => {
                 <div className="relative animate-fade-in animation-delay-400">
                     {/* profile image */}
                     <div className="relative max-w-md mx-auto">
-                        <div className="absolute inset-0 
-                            rounded-3xl bg-gradient-to-br 
-                            from-primary/30 via-transparent 
-                            to-primary/10 blur-2xl animate-pulse"
-                            />
+                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse"/>
                         <div className="relative glass rounded-3xl p-2 glow-border">
                             <img
                                 src="/profile-photo.png"

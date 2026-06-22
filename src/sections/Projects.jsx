@@ -69,8 +69,7 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A selection of my recent work, from complex Applications to innovative tools that solve real-world problems.
           </p>
         </div>
 
@@ -142,7 +141,7 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* View All CTA */}
+        {/* View All projects */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
             View All Projects

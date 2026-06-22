@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-    {href: "#home", label: "Home"},
+    {href: "#", label: "Home"},
     {href: "#about", label: "About"},
     {href: "#projects", label: "Projects"},
     {href: "#contact", label: "Contact"},
@@ -45,7 +45,7 @@ export const Navbar = () => {
                 </div>
                 {/*contact me button*/}
                 <div className="hidden md:block">
-                    <Button size="sm">Contact Me</Button>
+                    <a href="#contact"><Button href="#contact" size="sm">Contact Me</Button></a>
                 </div>
                 {/*mobile menu button*/}
                 <button className="md:hidden p-2 text-foreground cursor-pointer" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>

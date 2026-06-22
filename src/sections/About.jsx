@@ -24,6 +24,12 @@ const highlights = [
     description:
       "Staying ahead with the latest technologies and best practices.",
   },
+  {
+    icon: Rocket,
+    title: "Follow Deliverables",
+    description:
+      "Understand exactly what I need to build or write, track progress on specific items, and submit them on time.",
+  },
 ];
 
 export const About = () => {
